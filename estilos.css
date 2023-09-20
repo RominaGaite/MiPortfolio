@@ -1,0 +1,216 @@
+/*tipografia titulos*/
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+/*tipografia saludo*/
+@import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@800&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.section-1 {
+    padding: 0;
+    margin: 0;
+    width: 98vw;
+    height: 90vh;
+}
+
+.saludo {
+    width: 100%;
+    height: 5vh;
+    font-family: 'Life Savers', cursive;
+    color: rgb(132, 129, 132);
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 1rem;
+}
+
+.principal {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.perfil {
+    margin-left: 1rem;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1rem;
+
+
+}
+
+.personalidad {
+    margin-right: 1rem;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1rem;
+
+}
+
+/* Configuración del fondo circular */
+.circulo-fondo {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    /* Establece el punto de origen de la transformación en el centro */
+    transform: translate(-50%, -50%) rotate(0deg);
+    /* Inicialmente sin rotación */
+    z-index: 0;
+    animation: giroInfinito 80s linear infinite;
+    /* Animación de giro infinita */
+}
+
+/* Animación de giro */
+@keyframes giroInfinito {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        /* Sin rotación al inicio */
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        /* Rotación completa al final */
+    }
+}
+
+.imagen-perfil {
+    width: 120%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.foto {
+    width: 100%;
+    z-index: 1;
+}
+
+.seccion1a2 {
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.43);
+}
+
+.conoceme {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2rem;
+    color: white;
+    /* Inicia en color blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: textBlink 2s linear infinite alternate;
+    /* Animación de aparecer y desaparecer con cambio de color */
+}
+
+@keyframes textBlink {
+    0% {
+        color: white;
+        /* Inicia en color blanco */
+    }
+
+    50% {
+        color: pink;
+        /* Cambia a color rosa a la mitad de la animación */
+    }
+
+    100% {
+        color: white;
+        /* Vuelve a color blanco al final */
+    }
+}
+
+/*seccion2*/
+.section-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.foto-fondo {
+    background-image: url(https://i.pinimg.com/736x/4b/c2/0f/4bc20f4f2b0db4d20c00789716b3bf9f.jpg);
+    width: 50%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.sobre-mi {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1rem;
+}
+
+.link-portfolios{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: pink;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.5rem;
+}
+/* Define la animación */
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Aplica la animación a los elementos .portfolio */
+  .portfolio {
+    background-color: rgba(0, 0, 0, 0.597);
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem;
+    animation: slideInFromRight 1s ease-in-out forwards;
+    /* La animación dura 1 segundo y se aplica con efecto ease-in-out */
+  }
+  
+  /* Retrasa la animación en cada elemento .portfolio */
+  .portfolio:nth-child(1) {
+    animation-delay: 0.3s; /* Retrasa la animación del primer elemento en 0.2 segundos */
+  }
+  
+  .portfolio:nth-child(2) {
+    animation-delay: 0.6s; /* Retrasa la animación del segundo elemento en 0.4 segundos */
+  }
+  
+  .portfolio:nth-child(3) {
+    animation-delay: 0.8s; /* Retrasa la animación del tercer elemento en 0.6 segundos */
+  }
+  
